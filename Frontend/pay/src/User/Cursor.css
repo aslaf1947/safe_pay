@@ -1,0 +1,33 @@
+.cursor {
+  position: fixed;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: scale(1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cursor.active {
+  opacity: 1;
+  transform: scale(0);
+}
+
+.cursor-follower {
+  position: fixed;
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(2px, 2px);
+  transition: transform 0.6s ease, opacity 0.3s ease, background 0.3s ease;
+}
+
+.cursor-follower.active {
+  transform: scale(3);
+  background-color: rgba(255, 255, 0, 0.1); /* Subtle yellow glow */
+}
